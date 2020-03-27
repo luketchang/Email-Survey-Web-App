@@ -28,14 +28,13 @@ require('./routes/billingRoutes.js')(app);
 
 if(process.env.NODE_ENV === 'production'){
   //express will serve up production assets (e.g. main.js, main.css)
-  app.use(express.static('client/build'))
+  app.use(express.static('client/build'));
 
+  //express will serve up index.html if route isn't recognized on server side
   const path = require('path');
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html '));
   });
-  //express will serve up index.html if route isn't recognized
-
 }
 
 const PORT = process.env.PORT || 5000;
