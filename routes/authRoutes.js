@@ -13,7 +13,10 @@ module.exports = (app) => {
   //handle authentication differently since it knows user has profile already
   app.get(
     '/auth/google/callback',
-      passport.authenticate('google')
+      passport.authenticate('google'),
+      (req, res) => {
+        res.redirect('/surveys');
+      }
   );
 
   app.get('/api/current_user', (req, res) => {
@@ -22,6 +25,6 @@ module.exports = (app) => {
 
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
   });
 };
