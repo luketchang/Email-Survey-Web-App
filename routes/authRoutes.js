@@ -1,4 +1,4 @@
-const passport = require('passport')
+const passport = require('passport');
 
 module.exports = (app) => {
   //when /auth/google is run, it sends passport GoogleStrategy info to Google
