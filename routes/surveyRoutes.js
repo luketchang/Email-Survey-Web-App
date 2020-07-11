@@ -4,8 +4,8 @@ const { Path }  = require('path-parser');
 const { URL } = require('url');
 const requireLogin = require('../middlewares/requireLogin.js');
 const requireCredits = require('../middlewares/requireCredits.js');
-const Mailer = require('../services/Mailer.js');
-const surveyTemplate = require('../services/emailTemplates/surveyTemplate.js');
+const Mailer = require('../services/Mailer');
+const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
 
 const Survey = mongoose.model('surveys');
 

@@ -1,12 +1,12 @@
-//data layer control
 import 'materialize-css/dist/css/materialize.min.css';
+import './static/css/app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 
-import App from './components/App.js';
+import App from './components/App';
 import reducers from './reducers';
 
 //temporary

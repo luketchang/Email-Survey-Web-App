@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const keys = require('../config/keys.js');
+const keys = require('../config/keys');
 const mongoose = require('mongoose');
 
 //load all users in User collection from MongoDB

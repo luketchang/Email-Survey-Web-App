@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
-import Payments from './Payments.js';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Payments from './Payments';
 
 class Header extends Component{
-  renderContent(){
+  renderContent() {
     switch(this.props.auth){
       case null:
         return;
@@ -23,16 +23,17 @@ class Header extends Component{
     }
   }
 
-  render(){
+  render() {
     return(
       <nav>
-        <div className="nav-wrapper blue">
+        <div className="nav-wrapper cyan lighten-1">
           <Link
-          to={this.props.auth ? '/surveys' : '/'}
-          className="left brand-logo"
-          style={{paddingLeft: '10px'}}
+            to={this.props.auth ? '/surveys' : '/'}
+            className="left brand-logo"
+            style={{paddingLeft: '10px'}}
           >
             Emaily
+            <i className="material-icons right white-title" style={{fontSize: '50px'}}>email</i>
           </Link>
           <ul className="right">
             {this.renderContent()}
