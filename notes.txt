@@ -1,0 +1,11 @@
+Page, Reducer, Action Flow:
+    - import/use connect function from react-redux to connect reducer and store to component
+    - import/use actions and pass in as props in connect
+    - when action function is called, action is performed 
+    - when dispatch is called in action route, payload in dispatch is matched to reducer function
+    - reducer function returns info which is stored as state in redux store
+    - redirected page is connected to redux and now has access to updated state in store
+
+Lodash: library for object and variable manipulation (map, chain, compact, uniqBy)
+
+Middlewares are checks/processes run before request is fulfilled by server side

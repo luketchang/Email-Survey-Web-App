@@ -3,7 +3,7 @@ const helper = sendgrid.mail;
 const keys = require('../config/keys.js');
 
 class Mailer extends helper.Mail{
-  constructor({subject, recipients}, content){
+  constructor({ subject, recipients }, content){
     super();
 
     this.sgApi = sendgrid(keys.sendGridKey);

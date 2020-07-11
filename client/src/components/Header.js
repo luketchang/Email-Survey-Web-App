@@ -17,7 +17,7 @@ class Header extends Component{
       default:
         return [
           <li key="1"><Payments /></li>,
-          <li key="2" style={{margin: '0 10px'}}>Credits: {this.props.auth.credits}</li>,
+          <li key="2" style={{margin: '0 15px'}}>Credits: {this.props.auth.credits}</li>,
           <li key="3"><a href="/api/logout">Logout</a></li>
         ];
     }
@@ -26,10 +26,11 @@ class Header extends Component{
   render(){
     return(
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper blue">
           <Link
           to={this.props.auth ? '/surveys' : '/'}
           className="left brand-logo"
+          style={{paddingLeft: '10px'}}
           >
             Emaily
           </Link>
@@ -42,7 +43,7 @@ class Header extends Component{
   }
 }
 
-function mapStateToProps({auth}){
+function mapStateToProps({ auth }){
   return {
     auth: auth
   }
