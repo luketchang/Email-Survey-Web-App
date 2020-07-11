@@ -7,6 +7,7 @@
 - Google OAuth user login
 - Stripe payment integration for survey credit system
 - Sendgrid API for sending emails
+- Stack: React JS, Node JS, MongoDB
 
 
 ### Landing Page (not logged in)
