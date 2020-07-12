@@ -1,4 +1,4 @@
-# Survey-Feedback-Web-App
+# Survey Feedback Web App
 
 ## Summary:
 - web application allowing users to send and review email surveys in exchange for paid credits
